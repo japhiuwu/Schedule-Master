@@ -1,0 +1,27 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+	title: String;
+	estilo: string;
+	activo: string;
+}
+
+const {title, estilo, activo} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/930f5ef8d3.js" crossorigin="anonymous"></script>
+	<title>{title}</title>
+</head>
+<body>
+	<Header style={estilo} active={activo}/>
+	<slot></slot>
+	<Footer />
+</body>
+</html>

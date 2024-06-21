@@ -1,0 +1,54 @@
+---
+    import CardT from "../CardT.astro"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .card img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <section class="bg-white dark:bg-gray-900">
+        <div class="container px-6 py-10 mx-auto">
+            <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-gray-400">
+                ¿Qué dicen nuestros <span class="text-blue-500">clientes</span>?
+            </h1>
+
+            <p class="max-w-2xl mx-auto mt-6 text-center text-gray-500 dark:text-gray-300">
+                Descubre cómo ScheduleMaster ha revolucionado la forma en que nuestros clientes gestionan sus horarios y optimizan su tiempo.
+            </p>
+
+            <section class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 lg:grid-cols-2 xl:grid-cols-3">
+                <div class="grid grid-cols-1 gap-4">
+                    
+                    <CardT nombre="Robert" comentario="¡ScheduleMaster ha transformado nuestra manera de planificar y administrar horarios! Una solución intuitiva y efectiva." img="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" puesto="Director Escolar"/>
+
+                    <CardT nombre="Jeny Doe" comentario="Gracias a ScheduleMaster, hemos optimizado la distribución de clases y recursos, ahorrando tiempo y esfuerzo. ¡Totalmente recomendado!" puesto="Coordinadora Académica" img="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" />
+
+                    <CardT nombre="Ema Watson" puesto="Administradora" comentario="ScheduleMaster ha simplificado nuestra gestión de horarios de forma increíble. ¡Una herramienta imprescindible para nuestra organización!" img="https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" />
+                    
+                </div>
+            </section>
+        </div>
+    </section>
+</body>
+</html>
